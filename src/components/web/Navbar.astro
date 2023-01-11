@@ -1,0 +1,95 @@
+---
+import { Icon } from "astro-icon";
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+---
+
+<div class="bg-black px-12 py-3">
+    <div class="text-white text-sm">
+        <div class="flex flex-col md:flex-row">
+            <ul class="flex flex-wrap items-center gap-x-4">
+                <li class="flex items-center">
+                    <Icon name="mdi:phone" class="w-6 icon-navbar" />
+                    <a href="tel:+51994124442">Celular: +51 994 124 442</a>
+                </li>
+                <li class="flex items-center">
+                    <Icon name="mdi:google-maps" class="w-6 icon-navbar" />
+                    <a href="#">Ubicación: Leon XIII D2 Yanahuara, Arequipa</a>
+                </li>
+                <li class="flex items-center">
+                    <Icon name="mdi:clock" class="w-6 icon-navbar" />
+                    <a href="contact-us.html"
+                        >Lun - Vie: 10:00 - 19:00 | Sab: 10:00 - 17:00</a
+                    >
+                </li>
+            </ul><!-- /.contact__list -->
+
+            <div class="flex ml-auto">
+                <ul class="flex items-center gap-x-2 mr-2">
+                    <li>
+                        <a href="https://www.facebook.com/risso.beautystudio/">
+                            <Icon name="ion:social-facebook" class="w-5" />
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.instagram.com/risso.beautystudio/?hl=es-la"
+                            ><Icon name="ion:logo-instagram" class="w-5" /></a
+                        >
+                    </li>
+
+                    <li>
+                        <a href="#"
+                            ><Icon name="ion:logo-youtube" class="w-5" /></a
+                        >
+                    </li>
+                </ul>
+                <form class="flex items-center">
+                    <input
+                        type="text"
+                        class="bg-transparent border border-gray-600 px-5 py-1"
+                        placeholder="Buscar..."
+                    />
+                    <button class="header-topbar__search-btn"
+                        ><Icon name="ion:ios-search-strong" class="w-6" />
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<header
+    class="sticky bg-transparent top-0 z-40 flex-none items-center justify-between mx-auto w-full transition-all ease-in duration-100 lg:flex py-5 px-12 gap-5 bg-gradient-to-tr from-fuchsia-500 to-violet-500"
+>
+    <Astronav>
+        <div class="flex items-center justify-between">
+            <a>
+                <img
+                    class="w-36 md:w-44"
+                    src="/images/logo.svg"
+                    alt=""
+                    srcset=""
+                />
+            </a>
+            <div class="block lg:hidden">
+                <MenuIcon class="w-4 h-4 text-gray-800" />
+            </div>
+        </div>
+        <MenuItems class="hidden lg:flex">
+            <ul class="flex flex-col lg:flex-row lg:gap-10 text-white">
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Facial</a></li>
+                <li><a href="">Dental</a></li>
+                <li><a href="">Equipo</a></li>
+                <li><a href="">Convenios y promociones</a></li>
+                <li><a href="">Contáctanos</a></li>
+                <li>
+                    <a
+                        class="bg-risso p-5 rounded-3xl text-white font-bold tracking-widest"
+                        href="">Reservas</a
+                    >
+                </li>
+            </ul>
+        </MenuItems>
+    </Astronav>
+</header>
