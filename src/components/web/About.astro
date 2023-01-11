@@ -1,0 +1,46 @@
+---
+import TitlePage from "./TitlePage.astro";
+import Card from "./Card.astro";
+---
+
+<section>
+    <div class="container mx-auto my-10 px-5 md:px-20">
+        <TitlePage />
+        <div class="flex flex-col md:flex-row">
+            <Card
+                title="Estética Facial"
+                description="En clínica Risso entendemos que tus preocupaciones son importantes, sabemos que la imagen de nuestros pacientes se relaciona con su bienestar, es por ello que nuestros doctores desarrollarán un plan de tratamientos personalizados teniendo como objetivo principal:"
+                list={[
+                    "Mantener tu belleza natural",
+                    "Tener total confianza contigo mismo",
+                    "Proyectar la imagen que deseas ver",
+                    "Sentirte y verte fantástico",
+                    "Resultados rápidos y duraderos",
+                ]}
+                image="/images/card-facial.png"
+                url="facial"
+                colorText="text-white"
+                colorBg="bg-risso-blue"
+                color="border-white"
+                listStyle="list-card-home-green"
+            />
+            <Card
+                title="Estética Dental"
+                description="La estética dental es una especialidad odontológica que tiene como objetivo no solo mejorar los dientes y encías, sino que los cambios realizados se integren con el resto de rasgos faciales del paciente logrando un cambio total en tu sonrisa y haciéndote lucir un rostro estético. "
+                list={[
+                    "Diseñamos tu sonrisa tal cual la deseas",
+                    "Corregimos todo tipo de imperfecciones",
+                    "Podrás sonreir con total confianza",
+                    "Tendrás una mandibula y dentadura saludable",
+                    "Evaluamos previamente la forma de tu rostro y sonrisa para asesorarte",
+                ]}
+                image="/images/card-dental.png"
+                url="facial"
+                colorText="text-risso-blue"
+                colorBg="bg-gray-300"
+                color="border-risso-blue"
+                listStyle="list-card-home-blue"
+            />
+        </div>
+    </div>
+</section>

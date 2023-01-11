@@ -4,10 +4,24 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 ---
 
 <script>
+    var nav = document.getElementById("header");
+    var logo = document.getElementById("logo-navbar")
+    var items = document.getElementsByClassName("item-navbar")
     window.onscroll = () => {
-        let scroll = document.documentElement.scrollTop
-        if (scroll > 30) document.getElementById('header').classList.add("navbar-scroll");
-        else document.getElementById('header').classList.remove("navbar-scroll");
+        var scroll = document.documentElement.scrollTop;
+        if (scroll > 30) {
+            nav.classList.add("navbar-scroll");
+            logo.src = "/images/logo-dark.svg"
+            for (var i = 0; i < items.length; i++) {
+                items[i].style.color = "#1C335F"
+            }
+        } else {
+            nav.classList.remove("navbar-scroll");
+            logo.src = "/images/logo.svg"
+            for (var i = 0; i < items.length; i++) {
+                items[i].style.color = "white"
+            }
+        }
     };
 </script>
 
@@ -67,7 +81,8 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
     </div>
 </div>
 <header
-    class="fixed bg-transparent z-40 flex-none items-center justify-between mx-auto w-full transition-all ease-in duration-100 lg:flex py-5 px-12 gap-5" id="header"
+    class="fixed bg-transparent z-40 flex-none items-center justify-between mx-auto w-full transition-all duration-200 lg:flex py-5 px-12 gap-5"
+    id="header"
 >
     <Astronav>
         <div class="flex items-center justify-between">
@@ -76,7 +91,7 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
                     class="w-36 md:w-44"
                     src="/images/logo.svg"
                     alt=""
-                    srcset=""
+                    id="logo-navbar"
                 />
             </a>
             <div class="block lg:hidden">
@@ -85,12 +100,14 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
         </div>
         <MenuItems class="hidden lg:flex">
             <ul class="flex flex-col lg:flex-row lg:gap-10 text-white">
-                <li><a href="">Nosotros</a></li>
-                <li><a href="">Facial</a></li>
-                <li><a href="">Dental</a></li>
-                <li><a href="">Equipo</a></li>
-                <li><a href="">Convenios y promociones</a></li>
-                <li><a href="">Contáctanos</a></li>
+                <li><a class="item-navbar" href="/nosotros">Nosotros</a></li>
+                <li><a class="item-navbar" href="">Facial</a></li>
+                <li><a class="item-navbar" href="">Dental</a></li>
+                <li><a class="item-navbar" href="">Equipo</a></li>
+                <li>
+                    <a class="item-navbar" href="">Convenios y promociones</a>
+                </li>
+                <li><a class="item-navbar" href="">Contáctanos</a></li>
                 <li>
                     <a
                         class="bg-risso p-5 rounded-3xl text-white font-bold tracking-widest"

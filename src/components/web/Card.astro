@@ -1,0 +1,37 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    list: Array<string>;
+    image: string;
+    url: string;
+    colorText: string;
+    colorBg: string;
+    color: string;
+    listStyle: string;
+}
+
+const {title} = Astro.props
+const {description} = Astro.props
+const {list} = Astro.props
+const {image} = Astro.props
+const {url} = Astro.props
+const {colorText} = Astro.props
+const {colorBg} = Astro.props
+const {color} = Astro.props
+const {listStyle} = Astro.props
+---
+
+<div class={`${colorBg} p-10 md:p-20 ${colorText} m-4 relative`}>
+    <h2 class="text-4xl md:text-5xl">{ title }</h2>
+    <p class="text-1xl mt-8 leading-7">{ description }</p>
+    <ul class={`mt-8 mb-44 w-4/5 md:w-7/12 relative z-10 list-inside ${listStyle}`}>
+        {
+            list.map(item => (
+                <li class="mb-4">{item}</li>
+            ))
+        }
+    </ul>
+    <a class={`rounded-3xl border ${color} p-4 pr-16 relative z-10`} href={`${url}`}>Ver más</a>
+    <img src={`${image}`} class="absolute right-0 bottom-0 w-8/12">
+</div>

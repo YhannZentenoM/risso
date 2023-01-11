@@ -12,12 +12,29 @@ body{
 .icon-navbar{
   color: #3348E2;
 }
+.border-risso-blue{
+  border-color: #1C335F;
+}
 .bg-risso{
   background-color: #3348E2;
+}
+.bg-risso-blue{
+  background-color: #1C335F;
+}
+.text-risso-blue{
+  color: #1C335F;
 }
 .banner-risso{
   height: 80vh;
 }
 .navbar-scroll{
-  margin-top: -50px;
+  margin-top: -55px;
+  background-color: white;
+  transition: all .5s;
+}
+.list-card-home-green{
+  list-style-image: url('/images/CheckBoldGreen.svg');
+}
+.list-card-home-blue{
+  list-style-image: url('/images/CheckBoldBlue.svg');
 }
