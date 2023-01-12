@@ -38,3 +38,9 @@ body{
 .list-card-home-blue{
   list-style-image: url('/images/CheckBoldBlue.svg');
 }
+
+@media (max-width: 425px) {
+  .navbar-scroll{
+    margin-top: -125px;
+  }
+}

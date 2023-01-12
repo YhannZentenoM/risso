@@ -13,13 +13,18 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
             nav.classList.add("navbar-scroll");
             logo.src = "/images/logo-dark.svg"
             for (var i = 0; i < items.length; i++) {
-                items[i].style.color = "#1C335F"
+                // items[i].style.color = "#1C335F"
+                items[i].classList.remove("text-white")
+                items[i].classList.add("text-risso-blue")
+
             }
         } else {
             nav.classList.remove("navbar-scroll");
             logo.src = "/images/logo.svg"
             for (var i = 0; i < items.length; i++) {
-                items[i].style.color = "white"
+                // items[i].style.color = "white"
+                items[i].classList.remove("text-risso-blue")
+                items[i].classList.add("text-white")
             }
         }
     };
@@ -98,17 +103,15 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
                 <MenuIcon class="w-4 h-4 text-gray-800" />
             </div>
         </div>
-        <MenuItems class="hidden lg:flex">
-            <ul class="flex flex-col lg:flex-row lg:gap-10 text-white">
-                <li><a class="item-navbar" href="/nosotros">Nosotros</a></li>
-                <li><a class="item-navbar" href="">Facial</a></li>
-                <li><a class="item-navbar" href="">Dental</a></li>
-                <li><a class="item-navbar" href="">Equipo</a></li>
-                <li>
-                    <a class="item-navbar" href="">Convenios y promociones</a>
-                </li>
-                <li><a class="item-navbar" href="">Contáctanos</a></li>
-                <li>
+        <MenuItems class="hidden lg:flex bg-white md:bg-transparent mt-5 md:mt-0">
+            <ul class="flex flex-col lg:flex-row gap-1 lg:gap-10 text-risso-blue md:text-white">
+                <li class="p-2 md:p-0"><a class="item-navbar text-blue-900 md:text-white " href="/nosotros">Nosotros</a></li>
+                <li class="p-2 md:p-0"><a class="item-navbar text-blue-900 md:text-white " href="">Facial</a></li>
+                <li class="p-2 md:p-0"><a class="item-navbar text-blue-900 md:text-white " href="">Dental</a></li>
+                <li class="p-2 md:p-0"><a class="item-navbar text-blue-900 md:text-white " href="">Equipo</a></li>
+                <li class="p-2 md:p-0"><a class="item-navbar text-blue-900 md:text-white " href="">Convenios y promociones</a></li>
+                <li class="p-2 md:p-0"><a class="item-navbar text-blue-900 md:text-white " href="">Contáctanos</a></li>
+                <li class="p-4 md:p-0">
                     <a
                         class="bg-risso p-5 rounded-3xl text-white font-bold tracking-widest"
                         href="">Reservas</a

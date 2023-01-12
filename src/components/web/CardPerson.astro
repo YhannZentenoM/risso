@@ -1,0 +1,54 @@
+---
+import { Icon } from "astro-icon";
+interface Props {
+    name: string;
+    profession: string;
+    description: string;
+    image: string;
+    instagram: string;
+    linkedin: string;
+    url: string;
+}
+const { name } = Astro.props;
+const { profession } = Astro.props;
+const { description } = Astro.props;
+const { image } = Astro.props;
+const { instagram } = Astro.props;
+const { linkedin } = Astro.props;
+const { url } = Astro.props;
+---
+
+<div class="bg-white m-8">
+    <img src={`${image}`} alt="" class="w-full" />
+    <div class="p-7">
+        <h3 class="font-bold text-1xl">{name}</h3>
+        <p class="text-sm mt-1">{profession}</p>
+        <p class="text-sm text-zinc-500 mt-3">{description}</p>
+        <div class="flex mt-10 items-center justify-between">
+            <a
+                href={`${url}`}
+                class="rounded-3xl border border-risso-blue p-2 pl-5 pr-14 leading-8"
+                >Ver más</a
+            >
+            <ul class="flex items-center gap-x-3 justify-center">
+                <li>
+                    <a href={`${instagram}`}>
+                        <Icon
+                            name="ion:logo-instagram"
+                            class="w-7 icon-navbar"
+                        />
+                    </a>
+                </li>
+
+                <li>
+                    <a href={`${linkedin}`}
+                        ><Icon
+                            name="ion:logo-linkedin"
+                            class="w-7 icon-navbar"
+                        /></a
+                    >
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

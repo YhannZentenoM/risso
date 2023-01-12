@@ -1,5 +1,13 @@
+---
+interface Props {
+    title: string;
+    description: string;
+}
+const { title } = Astro.props;
+const { description } = Astro.props;
+---
+
 <div class="text-center my-24">
-    <h2 class="text-4xl md:text-5xl">Expertos en estética</h2>
-    <p class="text-1xl leading-6 mt-10">En Risso tenemos como propósito brindar las mejores experiencias para que puedas lucir tu belleza, priorizando siempre tu seguridad,<br> 
-        por lo que contamos con los mejores profesionales y utilizando solo los mejores productos.</p>
+    <h2 class="text-4xl md:text-5xl">{title}</h2>
+    <p class="text-1xl leading-6 mt-10">{description}</p>
 </div>
