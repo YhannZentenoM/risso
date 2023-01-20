@@ -1,13 +1,38 @@
+---
+interface Props {
+    title: string;
+    paragraph1: string;
+    paragraph2: string;
+    textButton: string;
+    url: string;
+    image: string;
+}
+const { title } = Astro.props
+const { paragraph1 } = Astro.props
+const { paragraph2 } = Astro.props
+const { textButton } = Astro.props
+const { url } = Astro.props
+const { image } = Astro.props
+---
+
 <section>
-    <div class="container mx-auto flex flex-col md:flex-row items-center justify-center">
+    <div
+        class="container mx-auto flex flex-col md:flex-row items-center justify-center"
+    >
         <div class="flex-1 text-center md:text-left p-10 md:p-20">
-            <h2 class="text-4xl md:text-5xl mb-8">Nuestro propósito</h2>
-            <p class="text-1xl leading-7 mb-8">Nuestro objetivo es brindar la mejor experiencia estética a nuestros clientes, priorizando todos los detalles para que puedan obtener los mejores resultados, siempre utilizando productos de alta calidad y con la asistencia de médicos y odontologos expertos en estética.</p>
-            <p class="text-1xl leading-7 font-bold mb-12">¿Listo para lucir la mejor versión de ti de la mano de los mejores odontólogos y médicos estéticos?</p>
-            <a href="/equipo" class='rounded-3xl border border-risso-blue text-risso-blue py-5 px-7'>Ver nuestros profesionales</a>
+            <h2 class="text-4xl md:text-5xl mb-8">{title}</h2>
+            <p class="text-1xl leading-7 mb-8">{paragraph1}</p>
+            <p class="text-1xl leading-7 font-semibold mb-12">
+                {paragraph2}
+            </p>
+            <a
+                href={`${url}`}
+                class="rounded-3xl border border-risso-blue text-risso-blue py-5 px-7"
+                >{textButton}</a
+            >
         </div>
         <div class="flex-1 p-10 md:p-20">
-            <img src="/images/proposal.png" alt="Proposal" class="w-full">
+            <img src={`${image}`} alt="Proposal" class="w-full" />
         </div>
     </div>
 </section>

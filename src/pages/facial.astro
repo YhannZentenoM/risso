@@ -2,11 +2,45 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/web/Navbar.astro";
 import Footer from "../components/web/Footer.astro";
-import Header from "../components/web/Header.astro";
+import HeaderService from "../components/web/HeaderService.astro";
+import ProposalAbout from "../components/web/ProposalAbout.astro";
+import HeadServices from "../components/web/HeadServices.astro";
+import ServicesList from "../components/web/ServicesList.astro";
 ---
 
-<Layout title="Inicio">
-	<Navbar />
-    <Header />
+<Layout title="Facial">
+    <Navbar />
+    <HeaderService
+        title="Tratamientos en estética Facial"
+        image="/images/slider1.png"
+    />
+    <ProposalAbout
+        title="Mejorando la belleza de tu rostro"
+        paragraph1="Realizamos los mejores tratamientos faciales, priorizando el cuidado de tu piel con tratamientos de rejuvenecimiento, manchas, acné y secuelas, al igual que tratamientos en modelación de tu rostro como aumento de labios, mentón, rinomodelación y bichectomía."
+        paragraph2="Utilizamos solo productos de las mejores marcas en todos nuestros tratamientos faciales, que cuentan con renombre y cumplen estándares internacionales."
+        textButton="Contáctanos"
+        url="/contactanos"
+        image="/images/proposal.png"
+    />
+    <section class="bg-gray-300 py-20 mt-20">
+        <HeadServices
+            title="Risso ah influido en la vida de los pacientes y ha brindado las mejores experiencias"
+            paragraph="Examina nuestros tratamientos en las distintas zonas de tu rostro junto a las distintas aplicaciones que harán lucir tu belleza."
+            image="/images/proposal.png"
+        />
+        <div class="container mx-auto flex flex-wrap gap-6 flex-col md:flex-row my-16 justify-center">
+            <ServicesList />
+            <ServicesList />
+            <ServicesList />
+            <ServicesList />
+            <ServicesList />
+            <ServicesList />
+            <ServicesList />
+            <ServicesList />
+            <ServicesList />
+            <ServicesList />
+            <ServicesList />
+        </div>
+    </section>
     <Footer />
 </Layout>
