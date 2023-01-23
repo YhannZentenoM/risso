@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/web/Navbar.astro";
+import Footer from "../components/web/Footer.astro";
+---
+
+<Layout title="Equipo">
+    <Navbar />
+    <section class="bg-gradient-to-b from-[#B179D4] to-[#5B58BB] h-36 md:h-80">
+    </section>
+    <section class="py-20">
+        <div class="container mx-auto">
+            <img src="/images/contact.png" alt="contact" />
+            <div class="pt-10 px-10 bg-gray-200 w-4/5 float-right">
+                <h2 class="text-4xl md:text-5xl">Contáctanos</h2>
+                <form action="">
+                    <input
+                        type="text"
+                        class="form-input mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black bg-transparent"
+                        placeholder="Nombre"
+                    />
+                    <input
+                        type="email"
+                        class="form-input mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black bg-transparent"
+                        placeholder="john@example.com"
+                    />
+                </form>
+            </div>
+        </div>
+    </section>
+    <Footer />
+</Layout>

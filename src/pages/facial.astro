@@ -6,6 +6,7 @@ import HeaderService from "../components/web/HeaderService.astro";
 import ProposalAbout from "../components/web/ProposalAbout.astro";
 import HeadServices from "../components/web/HeadServices.astro";
 import ServicesList from "../components/web/ServicesList.astro";
+import services from "../data/servicesfacial.json";
 ---
 
 <Layout title="Facial">
@@ -20,26 +21,25 @@ import ServicesList from "../components/web/ServicesList.astro";
         paragraph2="Utilizamos solo productos de las mejores marcas en todos nuestros tratamientos faciales, que cuentan con renombre y cumplen estándares internacionales."
         textButton="Contáctanos"
         url="/contactanos"
-        image="/images/proposal.png"
+        image="/images/facial01.png"
     />
     <section class="bg-gray-300 py-20 mt-20">
         <HeadServices
             title="Risso ah influido en la vida de los pacientes y ha brindado las mejores experiencias"
             paragraph="Examina nuestros tratamientos en las distintas zonas de tu rostro junto a las distintas aplicaciones que harán lucir tu belleza."
-            image="/images/proposal.png"
+            image="/images/facial02.png"
         />
-        <div class="container mx-auto flex flex-wrap gap-6 flex-col md:flex-row my-16 justify-center">
-            <ServicesList />
-            <ServicesList />
-            <ServicesList />
-            <ServicesList />
-            <ServicesList />
-            <ServicesList />
-            <ServicesList />
-            <ServicesList />
-            <ServicesList />
-            <ServicesList />
-            <ServicesList />
+        <div
+            class="container mx-auto flex flex-wrap gap-6 flex-col md:flex-row my-16 justify-center"
+        >
+            {
+                services.map((service) => (
+                    <ServicesList
+                        image={`/images/${service.image}`}
+                        name={`${service.name}`}
+                    />
+                ))
+            }
         </div>
     </section>
     <Footer />

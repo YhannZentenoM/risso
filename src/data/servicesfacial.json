@@ -1,0 +1,46 @@
+[
+    {
+        "image":"servicef01.png",
+        "name":"Botox & Ácido Hialurónico"
+    },
+    {
+        "image":"servicef02.png",
+        "name":"Tratamiento Antiacné"
+    },
+    {
+        "image":"servicef03.png",
+        "name":"Tratamiento Antimanchas"
+    },
+    {
+        "image":"servicef04.png",
+        "name":"Peeling Médico"
+    },
+    {
+        "image":"servicef06.png",
+        "name":"Microneedling"
+    },
+    {
+        "image":"servicef06.png",
+        "name":"Hydrafacial"
+    },
+    {
+        "image":"servicef07.png",
+        "name":"Plasma rico en plaquetas"
+    },
+    {
+        "image":"servicef08.png",
+        "name":"Hilos tensores"
+    },
+    {
+        "image":"servicef09.png",
+        "name":"Aumento de labios"
+    },
+    {
+        "image":"servicef10.png",
+        "name":"Rinomodelación"
+    },
+    {
+        "image":"servicef11.png",
+        "name":"Bichectomía"
+    }
+]
