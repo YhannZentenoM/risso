@@ -10,13 +10,13 @@ import { Icon } from "astro-icon";
 <Layout title="Josue Risso Paredes">
     <Navbar />
     <section
-        class="h-80 md:h-[550px] bg-gradient-to-b from-[#B179D4] to-[#5B58BB]"
+        class="h-40 md:h-[550px] bg-gradient-to-b from-[#B179D4] to-[#5B58BB]"
     >
     </section>
     <section>
-        <div class="container mx-auto flex">
-            <div class="w-1/3 p-10 relative">
-                <div class="absolute left-0 -top-96">
+        <div class="container mx-auto flex flex-col md:flex-row">
+            <div class="w-full md:w-1/3 p-5 md:p-10 relative">
+                <div class="static md:absolute md:left-0 md:-top-96">
                     <CardPerson
                         name="Dr. Josue Risso Paredes"
                         profession="Médico Cirujano"
@@ -26,12 +26,12 @@ import { Icon } from "astro-icon";
                         instagram=""
                         linkedin=""
                     />
-                    <div class="w-full bg-risso p-14 mt-6 flex flex-col gap-y-6">
+                    <div class="w-full bg-risso p-5 md:p-14 mt-6 flex flex-col gap-y-6">
                         <div class="w-full">
                             <Icon name="mdi:whatsapp" class="w-10 text-white" />
                         </div>
-                        <h3 class="font-extrabold text-3xl text-white">Contacto</h3>
-                        <p class="text-white font-light leading-loose">No dude en ponerse en contacto con nuestro amable personal de recepción con cualquier general o consulta médica llámanos.</p>
+                        <h3 class="font-extrabold text-2xl md:text-3xl text-white">Contacto</h3>
+                        <p class="text-white text-sm md:text-base font-light leading-normal md:leading-loose">No dude en ponerse en contacto con nuestro amable personal de recepción con cualquier general o consulta médica llámanos.</p>
                         <p class="font-extrabold text-3xl text-white">+51 994 124 442</p>
                     </div>
                     <div class="w-full bg-white p-5 mt-6 flex items-center">
@@ -39,28 +39,28 @@ import { Icon } from "astro-icon";
                             <div class="bg-risso p-4">
                                 <Icon name="carbon:generate-pdf" class="w-10 text-white" />
                             </div>
-                            <span class="text-3xl text-blue-500">Curriculum Vitae</span>
+                            <span class="text-2xl md:text-3xl text-blue-500">Curriculum Vitae</span>
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="w-2/3 py-20 px-24">
-                <h2 class="text-5xl mb-4">Biografía</h2>
-                <p class="mb-5 text-justify leading-loose">El Dr. Josue Risso Paredes recibió el grado de Medico Cirujano en la Universidad Privada Del Valle, una de las mejores universidades particulares en Bolivia. Durante los primeros años de su carrera trabajo en el área privada para las mejores clínicas de la ciudad del Cusco, especializadas en la atención de visitantes extranjeros de todo el mundo, brindando una atención de calidad internacional en las áreas de consulta externa, hospitalizacion y emergencias.</p>
-                <p class="mb-5 text-justify leading-loose">Su profundo interés por la relación entre el bienestar y la imagen de las personas lo llevaron a realizar el Posgrado Avanzado Superior en Medicina Estetica con Formacion Quirurgica en la sociedad Argentina de Estetica y Nutricion Integral en Buenos Aires – Argentina, el Posgrado avanzado en Rejuvecimiento Facial No quirúrgico y Procedimientos Medicos Esteticos con el reconocido Cirujano Plastico Brad Herman en Miami – Estados Unidos, y el Posgrado en Armonizacion orofacial y Medicina Estetica en la Facultade Do Centro Oeste Paulista de Sao Paulo – Brasil.</p>
-                <p class="mb-5 text-justify leading-loose">Los últimos tres años el Dr. Risso formo parte del selecto equipo medico de la corporación One Spa World con sede en Miami, realizando tratamientos médicos estéticos en cruceros de lujo viajando alrededor del mundo.</p>
-                <div class="bg-risso p-10 flex text-white">
+            <div class="w-full md:w-2/3 p-10 md:py-20 md:px-24">
+                <h2 class="text-4xl md:text-5xl mb-4">Biografía</h2>
+                <p class="mb-5 text-justify text-sm md:text-base leading-normal md:leading-loose">El Dr. Josue Risso Paredes recibió el grado de Medico Cirujano en la Universidad Privada Del Valle, una de las mejores universidades particulares en Bolivia. Durante los primeros años de su carrera trabajo en el área privada para las mejores clínicas de la ciudad del Cusco, especializadas en la atención de visitantes extranjeros de todo el mundo, brindando una atención de calidad internacional en las áreas de consulta externa, hospitalizacion y emergencias.</p>
+                <p class="mb-5 text-justify text-sm md:text-base leading-normal md:leading-loose">Su profundo interés por la relación entre el bienestar y la imagen de las personas lo llevaron a realizar el Posgrado Avanzado Superior en Medicina Estetica con Formacion Quirurgica en la sociedad Argentina de Estetica y Nutricion Integral en Buenos Aires – Argentina, el Posgrado avanzado en Rejuvecimiento Facial No quirúrgico y Procedimientos Medicos Esteticos con el reconocido Cirujano Plastico Brad Herman en Miami – Estados Unidos, y el Posgrado en Armonizacion orofacial y Medicina Estetica en la Facultade Do Centro Oeste Paulista de Sao Paulo – Brasil.</p>
+                <p class="mb-5 text-justify text-sm md:text-base leading-normal md:leading-loose">Los últimos tres años el Dr. Risso formo parte del selecto equipo medico de la corporación One Spa World con sede en Miami, realizando tratamientos médicos estéticos en cruceros de lujo viajando alrededor del mundo.</p>
+                <div class="bg-risso p-10 flex flex-col md:flex-row text-white">
                     <p class="flex-1 font-bold">Especialidades</p>
                     <p class="flex-1">Médico Cirujano</p>
                 </div>
-                <div class="bg-white p-10 flex">
+                <div class="bg-white p-10 flex flex-col md:flex-row">
                     <p class="flex-1 font-bold">Áreas de especialización</p>
                     <ul class="flex-1 list-inside list-card-home-blue">
                         <li class="mb-4">Medicina estética</li>
                         <li>Antienvejecimiento</li>
                     </ul>
                 </div>
-                <div class="bg-risso p-10 flex text-white">
+                <div class="bg-risso p-10 flex flex-col md:flex-row text-white">
                     <p class="flex-1 font-bold">Estudios</p>
                     <ul class="flex-1 list-inside list-card-home-green">
                         <li class="mb-4">Universidad Privada Del Valle - Bolivia</li>
