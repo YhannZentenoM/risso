@@ -1,0 +1,21 @@
+---
+interface Props{
+    title:string;
+    image:string;
+}
+const {title} = Astro.props
+const {image} = Astro.props
+---
+<section
+    class="h-80 md:h-[700px] relative overflow-hidden flex items-center header-service-item"
+    style={`background: url(${image}) no-repeat center; background-size:cover`}
+>
+    <div class="container mx-auto z-50">
+        <div class="h-full align-middle relative z-10 w-3/4 md:w-2/4">
+            <h1 class="text-3xl ml-5 md:ml-auto md:text-5xl lg:text-7xl text-white">
+                {title}
+            </h1>            
+        </div>
+    </div>
+    <!-- <img src={`${image}`} alt="" class="absolute top-0 left-0 w-full" /> -->
+</section>

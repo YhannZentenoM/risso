@@ -1,0 +1,17 @@
+---
+interface Props{
+    description:string;
+}
+const {description} = Astro.props
+---
+
+<div class="flex justify-center items-center w-2/3 -mt-52 z-10 bg-[#F5F6F8]">
+    <div class="container text-center md:text-right p-20 w-4/5">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl mb-12">
+            ¿En que consiste<br />el tratamiento?
+        </h1>
+        <p>
+            {description}
+        </p>
+    </div>
+</div>

@@ -1,46 +1,57 @@
 [
     {
         "image":"servicef01.png",
-        "name":"Botox & Ácido Hialurónico"
+        "name":"Botox & Ácido Hialurónico",
+        "url":"botox-acido-hialuronico"
     },
     {
         "image":"servicef02.png",
-        "name":"Tratamiento Antiacné"
+        "name":"Tratamiento Antiacné",
+        "url":"tratamiento-antiacne"
     },
     {
         "image":"servicef03.png",
-        "name":"Tratamiento Antimanchas"
+        "name":"Tratamiento Antimanchas",
+        "url":"tratamiento-antimanchas"
     },
     {
         "image":"servicef04.png",
-        "name":"Peeling Médico"
+        "name":"Peeling Médico",
+        "url":"peeling-medico"
     },
     {
         "image":"servicef06.png",
-        "name":"Microneedling"
+        "name":"Microneedling",
+        "url":"microneedling"
     },
     {
         "image":"servicef06.png",
-        "name":"Hydrafacial"
+        "name":"Hydrafacial",
+        "url":"hydrafacial"
     },
     {
         "image":"servicef07.png",
-        "name":"Plasma rico en plaquetas"
+        "name":"Plasma rico en plaquetas",
+        "url":"plasma-rico-en-plaquetas"
     },
     {
         "image":"servicef08.png",
-        "name":"Hilos tensores"
+        "name":"Hilos tensores",
+        "url":"hilos-tensores"
     },
     {
         "image":"servicef09.png",
-        "name":"Aumento de labios"
+        "name":"Aumento de labios",
+        "url":"aumento-de-labios"
     },
     {
         "image":"servicef10.png",
-        "name":"Rinomodelación"
+        "name":"Rinomodelación",
+        "url":"rinomodelacion"
     },
     {
         "image":"servicef11.png",
-        "name":"Bichectomía"
+        "name":"Bichectomía",
+        "url":"bichectomia"
     }
 ]

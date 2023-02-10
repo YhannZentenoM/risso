@@ -1,19 +1,25 @@
 ---
-interface Props{
-    image:string;
-    name:string;
+interface Props {
+    image: string;
+    name: string;
+    url: string;
 }
-const {image,name} = Astro.props
+const { image, name, url } = Astro.props;
 ---
-<div class="w-64 relative h-52 cursor-pointer service-button overflow-hidden">
-    <img
-        src={`${image}`}
-        alt="services"
-        class="w-full h-full absolute top-0"
-    />
+
+<a href={`/risso/facial/${url}`}>
     <div
-        class="bg-risso absolute bottom-3 left-3 p-1 bg-service-color transition-all duration-300"
+        class="w-64 relative h-52 cursor-pointer service-button overflow-hidden"
     >
-        <span class="text-white text-1xl">{name}</span>
+        <img
+            src={`${image}`}
+            alt="services"
+            class="w-full h-full absolute top-0"
+        />
+        <div
+            class="bg-risso absolute bottom-3 left-3 p-1 bg-service-color transition-all duration-300"
+        >
+            <span class="text-white text-1xl">{name}</span>
+        </div>
     </div>
-</div>
+</a>

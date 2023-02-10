@@ -13,7 +13,7 @@ import services from "../data/servicesfacial.json";
     <Navbar />
     <HeaderService
         title="Tratamientos en estética Facial"
-        image="/images/slider1.png"
+        image="/risso/images/slider1.png"
     />
     <ProposalAbout
         title="Mejorando la belleza de tu rostro"
@@ -21,13 +21,13 @@ import services from "../data/servicesfacial.json";
         paragraph2="Utilizamos solo productos de las mejores marcas en todos nuestros tratamientos faciales, que cuentan con renombre y cumplen estándares internacionales."
         textButton="Contáctanos"
         url="/contactanos"
-        image="/images/facial01.png"
+        image="/risso/images/facial01.png"
     />
     <section class="bg-gray-300 py-20 mt-20">
         <HeadServices
             title="Risso ah influido en la vida de los pacientes y ha brindado las mejores experiencias"
             paragraph="Examina nuestros tratamientos en las distintas zonas de tu rostro junto a las distintas aplicaciones que harán lucir tu belleza."
-            image="/images/facial02.png"
+            image="/risso/images/facial02.png"
         />
         <div
             class="container mx-auto flex flex-wrap gap-6 flex-col md:flex-row my-16 justify-center"
@@ -35,8 +35,9 @@ import services from "../data/servicesfacial.json";
             {
                 services.map((service) => (
                     <ServicesList
-                        image={`/images/${service.image}`}
+                        image={`/risso/images/${service.image}`}
                         name={`${service.name}`}
+                        url={`${service.url}`}
                     />
                 ))
             }

@@ -2,28 +2,67 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/web/Navbar.astro";
 import Footer from "../components/web/Footer.astro";
+import ButtonsContact from "../components/web/ButtonsContact.astro";
 ---
 
 <Layout title="Equipo">
     <Navbar />
-    <section class="bg-gradient-to-b from-[#B179D4] to-[#5B58BB] h-36 md:h-80">
+    <section class="bg-gradient-to-b from-[#B179D4] to-[#5B58BB] h-36 md:h-80 flex items-end">
+        <div class="container mx-auto flex justify-end items-end -mb-10">
+            <ButtonsContact />
+        </div>
     </section>
     <section class="py-20">
-        <div class="container mx-auto">
-            <img src="/images/contact.png" alt="contact" />
-            <div class="pt-10 px-10 bg-gray-200 w-4/5 float-right">
+        <div class="container mx-auto relative">
+            <div class="p-10 absolute w-2/6 -top-64 left-0 z-10">
+                <img src="/risso/images/contact.png" alt="contact" class="w-full" />
+            </div>
+            <div
+                class="p-10 md:pt-20 md:pr-20 md:pl-32 md:pb-48 mt-20 bg-gray-200 w-3/4 ml-auto relative"
+            >
                 <h2 class="text-4xl md:text-5xl">Contáctanos</h2>
                 <form action="">
-                    <input
-                        type="text"
-                        class="form-input mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black bg-transparent"
-                        placeholder="Nombre"
-                    />
-                    <input
-                        type="email"
-                        class="form-input mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black bg-transparent"
-                        placeholder="john@example.com"
-                    />
+                    <div
+                        class="flex flex-col md:flex-row gap-x-4 md:gap-x-20 py-10"
+                    >
+                        <input
+                            type="text"
+                            class="form-input mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black bg-transparent"
+                            placeholder="Nombre"
+                        />
+                        <input
+                            type="email"
+                            class="form-input mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black bg-transparent"
+                            placeholder="john@example.com"
+                        />
+                    </div>
+                    <div
+                        class="flex flex-col md:flex-row gap-x-4 md:gap-x-20 py-10"
+                    >
+                        <input
+                            type="text"
+                            class="form-input mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black bg-transparent"
+                            placeholder="Teléfono"
+                        />
+                        <input
+                            type="text"
+                            class="form-input mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black bg-transparent"
+                            placeholder="Asunto"
+                        />
+                    </div>
+                    <div
+                        class="flex flex-col md:flex-row gap-x-4 md:gap-x-20 py-10"
+                    >
+                        <input
+                            type="text"
+                            class="form-input mt-0 block w-full px-0.5 border-0 border-b-2 border-gray-400 focus:ring-0 focus:border-black bg-transparent"
+                            placeholder="Mensaje"
+                        />
+                    </div>
+                    <button
+                        class="bg-risso px-20 py-6 text-white absolute bottom-0 right-0"
+                        >Enviar solicitud</button
+                    >
                 </form>
             </div>
         </div>

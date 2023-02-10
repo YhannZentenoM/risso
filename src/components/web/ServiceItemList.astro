@@ -1,0 +1,14 @@
+---
+interface Props {
+    list: Array<string>;
+    listStyle: string;
+}
+const {list, listStyle} = Astro.props
+---
+<ul class={`w-4/5 list-inside ${listStyle}`}>
+    {
+        list.map(item => (
+            <li class="mb-4">{item}</li>
+        ))
+    }
+</ul>

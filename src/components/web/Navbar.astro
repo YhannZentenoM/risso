@@ -11,7 +11,7 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
         var scroll = document.documentElement.scrollTop;
         if (scroll > 30) {
             nav.classList.add("navbar-scroll");
-            logo.src = "/images/logo-dark.svg"
+            logo.src = "/risso/images/logo-dark.svg"
             for (var i = 0; i < items.length; i++) {
                 // items[i].style.color = "#1C335F"
                 items[i].classList.remove("text-white")
@@ -20,7 +20,7 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
             }
         } else {
             nav.classList.remove("navbar-scroll");
-            logo.src = "/images/logo.svg"
+            logo.src = "/risso/images/logo.svg"
             for (var i = 0; i < items.length; i++) {
                 // items[i].style.color = "white"
                 items[i].classList.remove("text-risso-blue")
@@ -86,7 +86,7 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
     </div>
 </div>
 <header
-    class="fixed bg-transparent z-40 flex-none items-center justify-between mx-auto w-full transition-all duration-200 lg:flex py-5 px-12 gap-5"
+    class="fixed bg-transparent z-[60] flex-none items-center justify-between mx-auto w-full transition-all duration-200 lg:flex py-5 px-12 gap-5"
     id="header"
 >
     <Astronav>
@@ -94,7 +94,7 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
             <a href="/risso">
                 <img
                     class="w-36 md:w-44"
-                    src="/images/logo.svg"
+                    src="/risso/images/logo.svg"
                     alt=""
                     id="logo-navbar"
                 />
@@ -105,12 +105,12 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
         </div>
         <MenuItems class="hidden lg:flex bg-white md:bg-transparent mt-5 md:mt-0">
             <ul class="flex flex-col lg:flex-row gap-1 lg:gap-10 text-risso-blue md:text-white">
-                <li class="p-2 md:p-0"><a class="item-navbar text-blue-900 md:text-white " href="/nosotros">Nosotros</a></li>
-                <li class="p-2 md:p-0"><a class="item-navbar text-blue-900 md:text-white " href="/facial">Facial</a></li>
+                <li class="p-2 md:p-0"><a class="item-navbar text-blue-900 md:text-white " href="/risso/nosotros">Nosotros</a></li>
+                <li class="p-2 md:p-0"><a class="item-navbar text-blue-900 md:text-white " href="/risso/facial">Facial</a></li>
                 <li class="p-2 md:p-0"><a class="item-navbar text-blue-900 md:text-white " href="">Dental</a></li>
-                <li class="p-2 md:p-0"><a class="item-navbar text-blue-900 md:text-white " href="/equipo">Equipo</a></li>
+                <li class="p-2 md:p-0"><a class="item-navbar text-blue-900 md:text-white " href="/risso/equipo">Equipo</a></li>
                 <li class="p-2 md:p-0"><a class="item-navbar text-blue-900 md:text-white " href="">Convenios y promociones</a></li>
-                <li class="p-2 md:p-0"><a class="item-navbar text-blue-900 md:text-white " href="/contactenos">Contáctanos</a></li>
+                <li class="p-2 md:p-0"><a class="item-navbar text-blue-900 md:text-white " href="/risso/contactenos">Contáctanos</a></li>
                 <li class="p-4 md:p-0">
                     <a
                         class="bg-risso p-5 rounded-3xl text-white font-bold tracking-widest"

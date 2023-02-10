@@ -1,0 +1,44 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/web/Navbar.astro";
+import Footer from "../../components/web/Footer.astro";
+import CardPerson from "../../components/web/CardPerson.astro";
+import { Icon } from "astro-icon";
+---
+
+<Layout title="Josue Risso Paredes">
+    <Navbar />
+    <section
+        class="h-80 md:h-[550px] bg-gradient-to-b from-[#B179D4] to-[#5B58BB]"
+    >
+    </section>
+    <section>
+        <div class="container mx-auto flex">
+            <div class="w-1/3 p-10 relative">
+                <div class="absolute left-0 -top-96">
+                    <CardPerson
+                        name="Dr. Josue Risso Paredes"
+                        profession="Médico Cirujano"
+                        description="El Dr. Josue Risso......"
+                        url="josue-risso-paredes"
+                        image="/risso/images/josue-risso.png"
+                        instagram=""
+                        linkedin=""
+                    />
+                    <div class="w-full bg-risso p-14 mt-6 flex flex-col gap-y-6">
+                        <div class="w-full">
+                            <Icon name="mdi:whatsapp" class="w-10 text-white" />
+                        </div>
+                        <h3 class="font-extrabold text-3xl text-white">Contacto</h3>
+                        <p class="text-white font-light leading-loose">No dude en ponerse en contacto con nuestro amable personal de recepción con cualquier general o consulta médica llámanos.</p>
+                        <p class="font-extrabold text-3xl text-white">+51 994 124 442</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-2/3 p-20">
+                <h2 class="text-5xl">Biografía</h2>
+            </div>
+        </div>
+    </section>
+    <Footer />
+</Layout>
