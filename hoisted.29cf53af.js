@@ -1,0 +1,1 @@
+import"./chunks/Astronav.astro_astro_type_script_index_0_lang.f061a200.js";import{t}from"./chunks/tiny-slider.0e16acc0.js";t({container:".my-slider",items:1,slideBy:"page",autoplay:!0,gutter:20,controls:!1,nav:!1,autoplayHoverPause:!0,autoplayButtonOutput:!1,responsive:{640:{items:1},900:{items:1}}});
