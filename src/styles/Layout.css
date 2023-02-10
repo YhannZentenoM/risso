@@ -67,6 +67,6 @@ body{
 
 @media (max-width: 425px) {
   .navbar-scroll{
-    margin-top: -125px;
+    margin-top: 0;
   }
 }

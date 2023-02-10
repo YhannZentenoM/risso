@@ -16,7 +16,7 @@ import DateServiceItem from "../../components/web/DateServiceItem.astro";
         image="/images/servicef11.png"
     />
     <section>
-        <div class="flex">
+        <div class="flex flex-col md:flex-row">
             <ButtonServiceItem title="Agenda una cita" />
             <DescriptionServiceItem
                 description="Es un procedimiento sencillo y seguro que consiste en la reducción quirúrgica del exceso de grasa en las mejillas mediante la extracción de las Bolas de Bichat, que son unas glándulas de tejido graso que no cumplen ninguna función específica en el adulto, si no que aportan volumen dando lugar a un rostro redondeado. A través de esta intervención se elimina el exceso de volumen en ambas mejillas y se obtiene un rostro más delgado y estilizado."
@@ -24,17 +24,17 @@ import DateServiceItem from "../../components/web/DateServiceItem.astro";
         </div>
     </section>
     <section class="py-5">
-        <div class="container mx-auto flex items-start">
-            <div class="w-1/2 p-20">
+        <div class="container mx-auto flex flex-col md:flex-row items-start">
+            <div class="w-full md:w-1/2 p-10 md:p-20 text-center md:text-left">
                 <p>
-                    <strong
+                    <span class="font-semibold"
                         >La lista de tratamientos que se aplicarán dependen de
-                        cada paciente y la condición de su piel</strong
+                        cada paciente y la condición de su piel</span
                     >, ya que cada caso es particular, más los tratamientos
                     combinados que se puede incluir generlamente son:
                 </p>
             </div>
-            <div class="w-1/2 p-20">
+            <div class="w-full md:w-1/2 p-10 md:p-20">
                 <ServiceItemList
                     list={[
                         "Hydrafacial premium",

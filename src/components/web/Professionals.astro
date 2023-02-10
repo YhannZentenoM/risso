@@ -3,33 +3,41 @@ import CardPerson from "./CardPerson.astro";
 ---
 
 <section>
-    <div class="container mx-auto flex flex-col md:flex-row justify-center gap-x-6">
-        <CardPerson
-            name="Dr. Orlando Origuela"
-            profession="Médico Cirujano"
-            description="El Dr. Josue Risso......"
-            url=""
-            image="/risso/images/orlando-origuela.png"
-            instagram=""
-            linkedin=""
-        />
-        <CardPerson
-            name="Dr. Josue Risso Paredes"
-            profession="Médico Cirujano"
-            description="El Dr. Josue Risso......"
-            url="josue-risso-paredes"
-            image="/risso/images/josue-risso.png"
-            instagram=""
-            linkedin=""
-        />
-        <CardPerson
-            name="Dr. Gabriel Tantalian"
-            profession="Odontólogo"
-            description="El Dr. Josue Risso......"
-            url=""
-            image="/risso/images/josue-risso.png"
-            instagram=""
-            linkedin=""
-        />
+    <div
+        class="container mx-auto flex flex-col md:flex-row justify-center gap-x-6"
+    >
+        <div class="flex-1">
+            <CardPerson
+                name="Dr. Orlando Origuela"
+                profession="Médico Cirujano"
+                description="El Dr. Josue Risso......"
+                url="orlando-origuela"
+                image="/risso/images/orlando-origuela.png"
+                instagram=""
+                linkedin=""
+            />
+        </div>
+        <div class="flex-1">
+            <CardPerson
+                name="Dr. Josue Risso Paredes"
+                profession="Médico Cirujano"
+                description="El Dr. Josue Risso Paredes recibió el grado de Medico Cirujano en la Universidad Privada Del Valle..."
+                url="josue-risso-paredes"
+                image="/risso/images/josue-risso.png"
+                instagram=""
+                linkedin=""
+            />
+        </div>
+        <div class="flex-1">
+            <CardPerson
+                name="Dr. Gabriel Tantalian"
+                profession="Odontólogo"
+                description="El Dr. Josue Risso......"
+                url="gabriel-tantalian"
+                image="/risso/images/josue-risso.png"
+                instagram=""
+                linkedin=""
+            />
+        </div>
     </div>
 </section>
