@@ -1,0 +1,47 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/web/Navbar.astro";
+import Footer from "../components/web/Footer.astro";
+import HeaderService from "../components/web/HeaderService.astro";
+import ProposalAbout from "../components/web/ProposalAbout.astro";
+import HeadServices from "../components/web/HeadServices.astro";
+import ServicesList from "../components/web/ServicesList.astro";
+import services from "../data/servicesdental.json";
+---
+
+<Layout title="Facial">
+    <Navbar />
+    <HeaderService
+        title="Tratamientos en estética dental"
+        image="/risso/images/dental-slider.png"
+    />
+    <ProposalAbout
+        title="Le devolvemos a tu sonrisa la estética que la caracteriza"
+        paragraph1="En Risso Dental Esthetic priorizamos la armonía de tu sonrisa utilizando solo productos de la mejor calidad, analizando y tomando en cuenta la armonía de tu rostro, teniendo especial cuidado en los resultados con la asistencia de los mejores odontólogos especializados."
+        paragraph2="Utilizamos solo productos premium de marcas reconocidas en todos nuestros tratamientos dentales, las cuales cumplen estándares internacionales de calidad."
+        textButton="Contáctanos"
+        url="/contactanos"
+        image="/risso/images/dental01.png"
+    />
+    <section class="bg-gray-300 py-20 mt-20">
+        <HeadServices
+            title="En Risso construimos las mejores sonrisas impactando positivamente en la vida de nuestros pacientes."
+            paragraph="Nuestros tratamientos tienen el propósito de otorgarle a tu sonrisa una estética perfecta, examina los tratamientos que tenemos para ti."
+            image="/risso/images/dental02.png"
+        />
+        <div
+            class="container mx-auto flex flex-wrap gap-6 flex-col md:flex-row my-16 justify-center"
+        >
+            {
+                services.map((service) => (
+                    <ServicesList
+                        image={`/risso/images/${service.image}`}
+                        name={`${service.name}`}
+                        url={`dental/${service.url}`}
+                    />
+                ))
+            }
+        </div>
+    </section>
+    <Footer />
+</Layout>

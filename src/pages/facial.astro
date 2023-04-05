@@ -13,7 +13,7 @@ import services from "../data/servicesfacial.json";
     <Navbar />
     <HeaderService
         title="Tratamientos en estética Facial"
-        image="/risso/images/slider1.png"
+        image="/risso/images/facial-slider.png"
     />
     <ProposalAbout
         title="Mejorando la belleza de tu rostro"
@@ -37,7 +37,7 @@ import services from "../data/servicesfacial.json";
                     <ServicesList
                         image={`/risso/images/${service.image}`}
                         name={`${service.name}`}
-                        url={`${service.url}`}
+                        url={`facial/${service.url}`}
                     />
                 ))
             }
