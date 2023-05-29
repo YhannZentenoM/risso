@@ -1,0 +1,156 @@
+---
+import Footer from "../components/web/Footer.astro";
+import HeaderService from "../components/web/HeaderService.astro";
+import Navbar from "../components/web/Navbar.astro";
+import TitlePage from "../components/web/TitlePage.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<script>
+    const selectedProductJSON = localStorage.getItem("selectedProducts");
+    const selectedProducts = JSON.parse(selectedProductJSON);
+
+    var tbody = document.querySelector("#table-cart tbody");
+    var sumTotal = 0;
+
+    selectedProducts.forEach((product) => {
+        var tr = document.createElement("tr");
+        tr.classList.add("bg-white", "border-b", "hover:bg-gray-50");
+
+        var tdNombre = document.createElement("td");
+        tdNombre.textContent = product["data-name"];
+        tdNombre.classList.add(
+            "px-6",
+            "py-4",
+            "font-semibold",
+            "text-gray-900"
+        );
+
+        var iptQty = document.createElement("input");
+        iptQty.type = "number";
+        iptQty.classList.add(
+            "bg-gray-50",
+            "w-14",
+            "border",
+            "border-gray-300",
+            "text-gray-900",
+            "text-sm",
+            "rounded-lg",
+            "focus:ring-blue-500",
+            "focus:border-blue-500",
+            "block",
+            "px-2.5",
+            "py-1",
+            "inp-cant"
+        );
+        iptQty.placeholder = "1";
+        iptQty.min = "1";
+        iptQty.required = true;
+        iptQty.value = 1;
+        iptQty.setAttribute("data-price", product["data-price"]);
+        iptQty.setAttribute("data-name", product["data-name"]);
+
+        var tdQty = document.createElement("td");
+        tdQty.classList.add("px-6", "py-4");
+        tdQty.appendChild(iptQty);
+
+        var tdPrice = document.createElement("td");
+        tdPrice.textContent = "S/ " + +product["data-price"];
+        tdPrice.classList.add("px-6", "py-4", "font-semibold", "text-gray-900");
+
+        var aRemove = document.createElement("button");
+        aRemove.type = "button";
+        aRemove.classList.add("font-medium", "text-red-600", "hover:underline");
+        aRemove.textContent = "Remover";
+
+        var tdRemove = document.createElement("td");
+        tdRemove.classList.add("px-6", "py-4");
+        tdRemove.appendChild(aRemove);
+
+        tr.appendChild(tdNombre);
+        tr.appendChild(tdQty);
+        tr.appendChild(tdPrice);
+        tr.appendChild(tdRemove);
+        tbody.appendChild(tr);
+    });
+
+    const total = document.getElementById("total-price");
+    const button = document.getElementById("btn-process-pay");
+    const cantidad = document.querySelectorAll(".inp-cant");
+    const selectedCant = [];
+
+    cantidad.forEach((cant) => {
+        cant.addEventListener("change", actualizarSuma);
+    });
+
+    actualizarSuma();
+
+    button.addEventListener("click", () => {
+        cantidad.forEach((cant) => {
+            const cantAttributes = {
+                name: cant.getAttribute("data-name"),
+                price: cant.getAttribute("data-price"),
+                cant: cant.value
+            };
+            selectedCant.push(cantAttributes);
+            const selectedCantJSON = JSON.stringify(selectedCant);
+            localStorage.setItem("products", selectedCantJSON);
+            window.location.href = "/proceso";
+        });
+    });
+
+    function actualizarSuma() {
+        sumTotal = 0;
+        cantidad.forEach(function (cant) {
+            sumTotal += +cant.getAttribute("data-price") * +cant.value || 0;
+        });
+        total.innerHTML = "S/ " + sumTotal.toFixed(2).toString();
+        localStorage.setItem("totalPay", sumTotal.toFixed(2).toString());
+    }
+</script>
+
+<Layout title="Carrito">
+    <Navbar />
+    <HeaderService
+        title="Descubre nuestros productos"
+        image="/images/facial-slider.png"
+    />
+    <section class="py-10 container mx-auto">
+        <TitlePage title="Carrito de compras" description="" />
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table
+                class="w-full text-sm text-left text-gray-50"
+                id="table-cart"
+            >
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3"> Productos</th>
+                        <th scope="col" class="px-6 py-3"> Cant.</th>
+                        <th scope="col" class="px-6 py-3"> Precio</th>
+                        <th scope="col" class="px-6 py-3"> Acción</th>
+                    </tr>
+                </thead>
+                <tbody> </tbody>
+                <tfoot>
+                    <tr class="font-semibold text-gray-900">
+                        <th scope="row" class="px-6 py-3 text-base">Total</th>
+                        <td></td>
+                        <td class="px-6 py-3 text-lg" id="total-price"
+                            >21,000</td
+                        >
+                        <th></th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="w-full flex justify-end">
+            <button
+                id="btn-process-pay"
+                type="button"
+                class="bg-risso px-5 py-4 rounded-3xl text-white font-bold tracking-widest mt-5"
+                >Procesar Pago</button
+            >
+        </div>
+    </section>
+    <Footer />
+</Layout>

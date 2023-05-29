@@ -10,24 +10,9 @@
         "url":"blanqueamiento-dental"
     },
     {
-        "image":"serviced03.jpg",
-        "name":"Diseño de Sonrisa",
-        "url":"diseno-de-sonrisa"
-    },
-    {
         "image":"serviced04.jpg",
         "name":"Coronas Dentales",
         "url":"coronas-dentales"
-    },
-    {
-        "image":"serviced05.jpg",
-        "name":"Aclaramiento Dental",
-        "url":"aclaramiento-dental"
-    },
-    {
-        "image":"serviced06.jpg",
-        "name":"Rehabilitación Oral",
-        "url":"rehabilitación-oral"
     },
     {
         "image":"serviced07.jpg",
@@ -35,18 +20,18 @@
         "url":"gingivectomia"
     },
     {
-        "image":"serviced08.jpg",
-        "name":"Bichectomia",
-        "url":"bichectomia"
+        "image":"serviced10.jpg",
+        "name":"Ortodoncia",
+        "url":"ortodoncia"
+    },
+    {
+        "image":"serviced05.jpg",
+        "name":"Tratamientos Generales",
+        "url":"tratamientos"
     },
     {
         "image":"serviced09.jpg",
         "name":"Implantes Dentales",
         "url":"implantes-dentales"
-    },
-    {
-        "image":"serviced10.jpg",
-        "name":"Ortodoncia",
-        "url":"ortodoncia"
     }
 ]

@@ -19,14 +19,16 @@ const { url } = Astro.props;
 ---
 
 <div class="bg-white">
-    <img src={`${image}`} alt="" class="w-full" />
+    <div class="w-full max-h-[400px] overflow-hidden">
+        <img src={`${image}`} alt="" class="w-full" />
+    </div>
     <div class="p-7">
         <h3 class="font-bold text-2xl">{name}</h3>
         <p class="mt-1">{profession}</p>
         <p class="text-sm text-zinc-500 mt-3">{description}</p>
         <div class="flex mt-10 items-center justify-between">
             <a
-                href={`/risso/equipo/${url}`}
+                href={`/equipo/${url}`}
                 class="rounded-3xl border border-risso-blue p-2 pl-5 pr-14 leading-8"
                 >Ver más</a
             >

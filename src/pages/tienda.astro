@@ -1,0 +1,67 @@
+---
+import Footer from "../components/web/Footer.astro";
+import HeaderService from "../components/web/HeaderService.astro";
+import Navbar from "../components/web/Navbar.astro";
+import Product from "../components/web/Product.astro";
+import Layout from "../layouts/Layout.astro";
+
+import products from "../data/products.json";
+---
+
+<script>
+    import Swal from "sweetalert2";
+
+    const buttons = document.querySelectorAll(".item-product");
+    const selectedButtons = [];
+
+    buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const buttonAttributes = {};
+            const attributes = button.attributes;
+            for (let i = 0; i < attributes.length; i++) {
+                buttonAttributes[attributes[i].name] = attributes[i].value;
+            }
+            selectedButtons.push(buttonAttributes);
+            
+            const selectedButtonsJSON = JSON.stringify(selectedButtons);
+            localStorage.setItem("selectedProducts", selectedButtonsJSON);
+
+            Swal.fire({
+                title: "Confirmado",
+                text: "Producto añadido correctamente.",
+                icon: "success",
+                showCancelButton: true,
+                confirmButtonColor: "#3348e2",
+                confirmButtonText: "Ir al carrito",
+                cancelButtonColor: "#1c2142",
+                cancelButtonText: "Seguir comprando",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "/carrito";
+                }
+            });
+        });
+    });
+</script>
+
+<Layout title="Tienda">
+    <Navbar />
+    <HeaderService
+        title="Descubre nuestros productos"
+        image="/images/facial-slider.png"
+    />
+    <section
+        class="container mx-auto py-20 flex flex-wrap gap-4 items-center justify-center"
+    >
+        {
+            products.map((product) => (
+                <Product
+                    name={`${product.name}`}
+                    image={`${product.image}`}
+                    price={product.price}
+                />
+            ))
+        }
+    </section>
+    <Footer />
+</Layout>

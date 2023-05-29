@@ -7,5 +7,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://polaco300.github.io',
-  base: '/risso'
+  // base: '/risso'
 });

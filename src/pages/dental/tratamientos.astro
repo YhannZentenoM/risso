@@ -9,17 +9,17 @@ import ServiceItemList from "../../components/web/ServiceItemList.astro";
 import DateServiceItem from "../../components/web/DateServiceItem.astro";
 ---
 
-<Layout title="Gingivectomía">
+<Layout title="Tratamientos Generales">
     <Navbar />
     <HeaderServiceItem
-        title="Gingivectomía"
-        image="/risso/images/serviced07.jpg"
+        title="Tratamientos Generales"
+        image="/images/serviced05.jpg"
     />
     <section>
         <div class="flex flex-col md:flex-row">
             <ButtonServiceItem title="Agenda una cita" />
             <DescriptionServiceItem
-                description="¡Que tu sonrisa se muestre completa y perfecta! Tratamiento de estética dental para mejorar el tamaño de las encías a través de procedimientos quirúrgicos mediante los cuales se elimina una parte del tejido gingival o de la encía, bien para tratar algún problema o bien para mejorar el aspecto de la sonrisa. Mediante esta operación se modifica el contorno, el tamaño o la forma de las encías."
+                description="¡Una sonrisa saludable es una sonrisa hermosa! la Odontología General cuenta con una gran cantidad de tratamientos preventivos, que evitan la aparición de patologías graves. Asimismo, muchas de sus técnicas están enfocadas a tratar las enfermedades bucodentales en sus etapas iniciales. La caries y la gingivitis son dos de los problemas de salud más frecuentes entre la población. La Odontología General permite curarlas y que no deriven en afecciones más graves"
             />
         </div>
     </section>
@@ -28,16 +28,17 @@ import DateServiceItem from "../../components/web/DateServiceItem.astro";
             <div class="w-full md:w-1/2 p-10 md:p-20 text-center md:text-left">
                 <p>
                     <span class="font-semibold"
-                        >En Risso Dental Studio sabemos la importancia de los tratamientos estéticos, por lo que contamos con los mejores especialistas ofreciendo los siguientes beneficios:</span
+                        >Una parte importante de la estética bucal es la salud de la misma, por lo que en Risso Dental Studio contamos con los siguientes tratamientos generales:</span
                     >
                 </p>
             </div>
             <div class="w-full md:w-1/2 p-10 md:p-20">
                 <ServiceItemList
                     list={[
-                        "Corrección de asimetrías e irregularidades.",
-                        "Se corrige la desproporción de las encías con los dientes, en la mayoría de los casos, se trata de personas que muestran demasiado las encías al sonreír, Es decir, que tienen sonrisa gingival.",
-                        "Se pueden tratar problemas.",
+                        "Detartraje (limpieza dental)",
+                        "Profilaxis",
+                        "Restauraciones estéticas",
+                        "Fluorización"
                     ]}
                     listStyle="list-card-home-blue"
                 />

@@ -6,7 +6,7 @@
         slideBy: "page",
         autoplay: true,
         gutter: 20,
-        controls: false,
+        controls: true,
         nav: false,
         autoplayHoverPause: true,
         autoplayButtonOutput: false,
@@ -19,100 +19,97 @@
             },
         },
     });
+    const prev = document.querySelector(".tns-controls button[data-controls='prev']");
+    prev.innerHTML = '<img src="/images/IonIosArrowDropleftCircle.svg" />';
+    const next = document.querySelector(".tns-controls button[data-controls='next']");
+    next.innerHTML = '<img src="/images/IonIosArrowDroprightCircle.svg" />';
+
 </script>
 <div class="my-slider">
-
-        <div
-            class="h-72 md:h-screen bg-gradient-to-b from-[#B179D4] to-[#5B58BB] overflow-hidden "
-        >
-            <div class="w-full mx-auto h-full pl-0 md:pl-28">
-                <div class="h-full flex items-end md:items-center">
-                    <div class="w-1/2 md:w-5/12">
-                        <h1
-                            class="text-xl ml-5 md:ml-10 md:text-5xl lg:text-7xl text-white"
+    <div
+        class="h-72 md:h-screen bg-gradient-to-b from-[#B179D4] to-[#5B58BB] overflow-hidden"
+    >
+        <div class="w-full mx-auto h-full pl-0 md:pl-28">
+            <div class="h-full flex items-end md:items-center">
+                <div class="w-1/2 md:w-5/12">
+                    <h1
+                        class="text-xl ml-5 md:ml-10 md:text-5xl lg:text-7xl text-white"
+                    >
+                        Vuelve a lucir un <span class="text-pink-300"
+                            >rostro joven y hermoso</span
                         >
-                            Vuelve a lucir un <span class="text-pink-300"
-                                >rostro joven y hermoso</span
-                            >
-                        </h1>
-                        <p class="ml-5 md:ml-10 text-sm md:text-4xl mt-5 text-white">
-                            Tratamiento de <span
-                                class="text-yellow-500 font-extrabold"
-                                >rejuvenecimiento con botox y ácido
-                                hialurónico</span
-                            >
-                        </p>
-                    </div>
-                    <div class="w-1/2 md:w-7/12">
-                        <img
-                            src="/risso/images/slider1.png"
-                            alt=""
-                            class="w-full"
-                        />
-                    </div>
+                    </h1>
+                    <p
+                        class="ml-5 md:ml-10 text-sm md:text-4xl mt-5 text-white"
+                    >
+                        Tratamiento de <span
+                            class="text-yellow-500 font-extrabold"
+                            >rejuvenecimiento con botox y ácido hialurónico</span
+                        >
+                    </p>
+                </div>
+                <div class="w-1/2 md:w-7/12">
+                    <img src="/images/slider1.png" alt="" class="w-full" />
                 </div>
             </div>
         </div>
+    </div>
 
-        <div
-            class="h-72 md:h-screen bg-gradient-to-b from-[#B179D4] to-[#5B58BB] overflow-hidden "
-        >
-            <div class="w-full mx-auto h-full pl-0 md:pl-28">
-                <div class="h-full flex items-end md:items-center">
-                    <div class="w-1/2 md:w-5/12">
-                        <h1
-                            class="text-xl ml-5 md:ml-10 md:text-5xl lg:text-7xl text-white"
+    <div
+        class="h-72 md:h-screen bg-gradient-to-b from-[#26358f] to-[#3d59ab] overflow-hidden"
+    >
+        <div class="w-full mx-auto h-full pl-0 md:pl-28">
+            <div class="h-full flex items-end md:items-center">
+                <div class="w-1/2 md:w-5/12">
+                    <h1
+                        class="text-xl ml-5 md:ml-10 md:text-5xl lg:text-7xl text-white"
+                    >
+                        Tus brackets no tienen <span class="text-blue-300"
+                            >por que ser visibles</span
                         >
+                    </h1>
+                    <p
+                        class="ml-5 md:ml-10 text-sm md:text-4xl mt-5 text-white"
+                    >
+                        Tratamiento de <span
+                            class="text-yellow-500 font-extrabold"
+                            >ortodoncia estética</span
+                        >
+                    </p>
+                </div>
+                <div class="w-1/2 md:w-7/12">
+                    <img src="/images/slider3.png" alt="" class="w-full" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div
+        class="h-72 md:h-screen bg-gradient-to-b from-[#B179D4] to-[#5B58BB] overflow-hidden"
+    >
+        <div class="w-full mx-auto h-full pl-0 md:pl-28">
+            <div class="h-full flex items-end md:items-center">
+                <div class="w-1/2 md:w-5/12">
+                    <h1
+                        class="text-xl ml-5 md:ml-10 md:text-5xl lg:text-7xl text-white"
+                    >
                         Una nariz respingada <span class="text-pink-300"
-                                >y estética en minutos</span
-                            >
-                        </h1>
-                        <p class="ml-5 md:ml-10 text-sm md:text-4xl mt-5 text-white">
-                            Tratamiento de <span
-                                class="text-yellow-500 font-extrabold"
-                                >rinomodelación, aumento de labios y bichectomía</span
-                            >
-                        </p>
-                    </div>
-                    <div class="w-1/2 md:w-7/12">
-                        <img
-                            src="/risso/images/slider2.png"
-                            alt=""
-                            class="w-full"
-                        />
-                    </div>
+                            >y estética en minutos</span
+                        >
+                    </h1>
+                    <p
+                        class="ml-5 md:ml-10 text-sm md:text-4xl mt-5 text-white"
+                    >
+                        Tratamiento de <span
+                            class="text-yellow-500 font-extrabold"
+                            >rinomodelación, aumento de labios y bichectomía</span
+                        >
+                    </p>
+                </div>
+                <div class="w-1/2 md:w-7/12">
+                    <img src="/images/slider2.png" alt="" class="w-full" />
                 </div>
             </div>
         </div>
-        <!-- <div
-            class="h-72 md:h-screen bg-gradient-to-b from-[#B179D4] to-[#5B58BB] relative overflow-hidden "
-        >
-            <div class="container mx-auto h-full">
-                <div class="h-full flex items-center">
-                    <div class="">
-                        <h1
-                            class="text-3xl ml-5 md:ml-10 md:text-5xl lg:text-7xl text-white"
-                        >
-                            Una nariz respingada<br /><span class="text-pink-300"
-                                >y estética en minutos</span
-                            >
-                        </h1>
-                        <p class="ml-5 md:ml-10 md:text-4xl mt-5 text-white">
-                            Tratamiento de <span
-                                class="text-yellow-500 font-extrabold"
-                                >rinomodelación,<br />aumento de labios y bichectomía</span
-                            >
-                        </p>
-                    </div>
-                    <div class="absolute bottom-0 -right-20 -z-10">
-                        <img
-                            src="/risso/images/slider2.png"
-                            alt=""
-                            class="w-11/12"
-                        />
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
+    </div>
 </div>

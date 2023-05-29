@@ -40,10 +40,10 @@ body{
   transition: all .5s;
 }
 .list-card-home-green{
-  list-style-image: url('/risso/images/CheckBoldGreen.svg');
+  list-style-image: url('/images/CheckBoldGreen.svg');
 }
 .list-card-home-blue{
-  list-style-image: url('/risso/images/CheckBoldBlue.svg');
+  list-style-image: url('/images/CheckBoldBlue.svg');
 }
 .service-button:hover .bg-service-color{
   width: 100%;
@@ -63,6 +63,46 @@ body{
   content: "";
   inset: 0;
   background-color: rgba(0, 0, 0, .33);
+}
+.tns-controls{
+  position: absolute;
+  z-index: 9;
+  height: 100%;
+  width: 100%;
+}
+.tns-controls button{
+  opacity: .3;
+  transition: all .5;
+}
+.tns-controls button:hover{
+  opacity: 1;
+}
+.tns-controls button[data-controls="prev"]{
+  top: 50%;
+  position: absolute;
+  left: 10px;
+}
+.tns-controls button[data-controls="next"]{
+  top: 50%;
+  position: absolute;
+  right: 10px;
+}
+.btn-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #3348E2;
+  color: #fff;
+  border-radius: 50%;
+  padding: 16px;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  z-index: 12;
+}
+.btn-floating:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
 }
 
 @media (max-width: 425px) {

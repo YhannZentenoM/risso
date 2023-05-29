@@ -13,7 +13,7 @@ import services from "../data/servicesdental.json";
     <Navbar />
     <HeaderService
         title="Tratamientos en estética dental"
-        image="/risso/images/dental-slider.png"
+        image="/images/dental-slider.png"
     />
     <ProposalAbout
         title="Le devolvemos a tu sonrisa la estética que la caracteriza"
@@ -21,13 +21,13 @@ import services from "../data/servicesdental.json";
         paragraph2="Utilizamos solo productos premium de marcas reconocidas en todos nuestros tratamientos dentales, las cuales cumplen estándares internacionales de calidad."
         textButton="Contáctanos"
         url="/contactanos"
-        image="/risso/images/dental01.png"
+        image="/images/dental01.png"
     />
     <section class="bg-gray-300 py-20 mt-20">
         <HeadServices
             title="En Risso construimos las mejores sonrisas impactando positivamente en la vida de nuestros pacientes."
             paragraph="Nuestros tratamientos tienen el propósito de otorgarle a tu sonrisa una estética perfecta, examina los tratamientos que tenemos para ti."
-            image="/risso/images/dental02.png"
+            image="/images/dental02.png"
         />
         <div
             class="container mx-auto flex flex-wrap gap-6 flex-col md:flex-row my-16 justify-center"
@@ -35,7 +35,7 @@ import services from "../data/servicesdental.json";
             {
                 services.map((service) => (
                     <ServicesList
-                        image={`/risso/images/${service.image}`}
+                        image={`/images/${service.image}`}
                         name={`${service.name}`}
                         url={`dental/${service.url}`}
                     />
